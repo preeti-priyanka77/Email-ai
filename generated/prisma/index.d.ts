@@ -876,6 +876,7 @@ export namespace Prisma {
     emailAddress: string | null
     firstName: string | null
     lastName: string | null
+    imageUrl: string | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -883,6 +884,7 @@ export namespace Prisma {
     emailAddress: string | null
     firstName: string | null
     lastName: string | null
+    imageUrl: string | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -890,6 +892,7 @@ export namespace Prisma {
     emailAddress: number
     firstName: number
     lastName: number
+    imageUrl: number
     _all: number
   }
 
@@ -899,6 +902,7 @@ export namespace Prisma {
     emailAddress?: true
     firstName?: true
     lastName?: true
+    imageUrl?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -906,6 +910,7 @@ export namespace Prisma {
     emailAddress?: true
     firstName?: true
     lastName?: true
+    imageUrl?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -913,6 +918,7 @@ export namespace Prisma {
     emailAddress?: true
     firstName?: true
     lastName?: true
+    imageUrl?: true
     _all?: true
   }
 
@@ -993,6 +999,7 @@ export namespace Prisma {
     emailAddress: string
     firstName: string
     lastName: string | null
+    imageUrl: string | null
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -1017,6 +1024,7 @@ export namespace Prisma {
     emailAddress?: boolean
     firstName?: boolean
     lastName?: boolean
+    imageUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1024,6 +1032,7 @@ export namespace Prisma {
     emailAddress?: boolean
     firstName?: boolean
     lastName?: boolean
+    imageUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1031,6 +1040,7 @@ export namespace Prisma {
     emailAddress?: boolean
     firstName?: boolean
     lastName?: boolean
+    imageUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -1038,9 +1048,10 @@ export namespace Prisma {
     emailAddress?: boolean
     firstName?: boolean
     lastName?: boolean
+    imageUrl?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "emailAddress" | "firstName" | "lastName", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "emailAddress" | "firstName" | "lastName" | "imageUrl", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -1050,6 +1061,7 @@ export namespace Prisma {
       emailAddress: string
       firstName: string
       lastName: string | null
+      imageUrl: string | null
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1477,6 +1489,7 @@ export namespace Prisma {
     readonly emailAddress: FieldRef<"User", 'String'>
     readonly firstName: FieldRef<"User", 'String'>
     readonly lastName: FieldRef<"User", 'String'>
+    readonly imageUrl: FieldRef<"User", 'String'>
   }
     
 
@@ -1861,7 +1874,8 @@ export namespace Prisma {
     id: 'id',
     emailAddress: 'emailAddress',
     firstName: 'firstName',
-    lastName: 'lastName'
+    lastName: 'lastName',
+    imageUrl: 'imageUrl'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -1935,6 +1949,7 @@ export namespace Prisma {
     emailAddress?: StringFilter<"User"> | string
     firstName?: StringFilter<"User"> | string
     lastName?: StringNullableFilter<"User"> | string | null
+    imageUrl?: StringNullableFilter<"User"> | string | null
   }
 
   export type UserOrderByWithRelationInput = {
@@ -1942,6 +1957,7 @@ export namespace Prisma {
     emailAddress?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrderInput | SortOrder
+    imageUrl?: SortOrderInput | SortOrder
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -1952,6 +1968,7 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     firstName?: StringFilter<"User"> | string
     lastName?: StringNullableFilter<"User"> | string | null
+    imageUrl?: StringNullableFilter<"User"> | string | null
   }, "id" | "emailAddress">
 
   export type UserOrderByWithAggregationInput = {
@@ -1959,6 +1976,7 @@ export namespace Prisma {
     emailAddress?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrderInput | SortOrder
+    imageUrl?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -1972,6 +1990,7 @@ export namespace Prisma {
     emailAddress?: StringWithAggregatesFilter<"User"> | string
     firstName?: StringWithAggregatesFilter<"User"> | string
     lastName?: StringNullableWithAggregatesFilter<"User"> | string | null
+    imageUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
   export type UserCreateInput = {
@@ -1979,6 +1998,7 @@ export namespace Prisma {
     emailAddress: string
     firstName: string
     lastName?: string | null
+    imageUrl?: string | null
   }
 
   export type UserUncheckedCreateInput = {
@@ -1986,6 +2006,7 @@ export namespace Prisma {
     emailAddress: string
     firstName: string
     lastName?: string | null
+    imageUrl?: string | null
   }
 
   export type UserUpdateInput = {
@@ -1993,6 +2014,7 @@ export namespace Prisma {
     emailAddress?: StringFieldUpdateOperationsInput | string
     firstName?: StringFieldUpdateOperationsInput | string
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateInput = {
@@ -2000,6 +2022,7 @@ export namespace Prisma {
     emailAddress?: StringFieldUpdateOperationsInput | string
     firstName?: StringFieldUpdateOperationsInput | string
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserCreateManyInput = {
@@ -2007,6 +2030,7 @@ export namespace Prisma {
     emailAddress: string
     firstName: string
     lastName?: string | null
+    imageUrl?: string | null
   }
 
   export type UserUpdateManyMutationInput = {
@@ -2014,6 +2038,7 @@ export namespace Prisma {
     emailAddress?: StringFieldUpdateOperationsInput | string
     firstName?: StringFieldUpdateOperationsInput | string
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -2021,6 +2046,7 @@ export namespace Prisma {
     emailAddress?: StringFieldUpdateOperationsInput | string
     firstName?: StringFieldUpdateOperationsInput | string
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -2063,6 +2089,7 @@ export namespace Prisma {
     emailAddress?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrder
+    imageUrl?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -2070,6 +2097,7 @@ export namespace Prisma {
     emailAddress?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrder
+    imageUrl?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -2077,6 +2105,7 @@ export namespace Prisma {
     emailAddress?: SortOrder
     firstName?: SortOrder
     lastName?: SortOrder
+    imageUrl?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {

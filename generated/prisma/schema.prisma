@@ -16,4 +16,5 @@ model User {
   emailAddress String  @unique
   firstName    String
   lastName     String?
+  imageUrl     String?
 }
